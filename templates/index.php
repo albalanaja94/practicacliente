@@ -14,6 +14,7 @@ if(isset($_REQUEST['id'])){
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title></title>
     <link rel="stylesheet" href="../css/style.css">
+    <script src="../js/static.js"></script>
 </head>
 
 <body>
@@ -22,9 +23,9 @@ if(isset($_REQUEST['id'])){
 			<div class="logo">RSS</div>
 		<nav class="menu">
 			<ul>
-				<li class="home"><a class="enlace" href='/'>Home</a></li>
+				<li class="home"><a class="enlace" href='index.php'>Home</a></li>
 				<li class="inscribete"><a class="enlace" href='?id=formulario'>Inscríbete</a></li>
-				<li class="ver"><a class="enlace" href='?id=lista'>Ver todas las suscripciones</a></li>
+				<li class="ver"><a class="enlace" href='?id=list'>Ver todas las suscripciones</a></li>
 			</ul>
 		</nav>
 	</div>

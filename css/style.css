@@ -140,6 +140,9 @@ p {
 h1, h2 {
   font-family: "roboto-bold", Arial, sans-serif; }
 
+input {
+  outline: none; }
+
 /* ***************************************************** VARIABLES */
 @font-face {
   font-family: "roboto-bold";
@@ -805,6 +808,63 @@ div.enlace {
   .link:hover {
     background-color: #FFFFFF;
     color: #609eab; }
+
+form {
+  max-width: 700px;
+  font-size: 0; }
+  form > div {
+    display: inline-block;
+    vertical-align: top;
+    width: 50%;
+    font-size: 16px;
+    font-family: "roboto-regular", Arial, sans-serif;
+    padding: 10px 0; }
+    form > div label {
+      padding-right: 10px;
+      font-family: "roboto-bold", Arial, sans-serif; }
+    form > div input {
+      padding: 5px; }
+  form input[type="button"] {
+    display: block;
+    cursor: pointer;
+    text-align: center;
+    margin-bottom: 40px;
+    margin-top: 40px;
+    background-color: #609eab;
+    color: #FFFFFF;
+    border: 2px solid #609eab;
+    border-radius: 5px;
+    font-family: "roboto-bold", Arial, sans-serif;
+    text-decoration: none;
+    padding: 5px 20px;
+    font-size: 22px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    transition: all 0.5s ease-in-out; }
+    form input[type="button"]:hover {
+      background-color: #FFFFFF;
+      color: #609eab; }
+
+.content {
+  font-size: 0; }
+  .content > div {
+    display: inline-block;
+    vertical-align: top;
+    width: 25%;
+    font-family: "roboto-regular", Arial, sans-serif; }
+    .content > div label {
+      font-size: 16px;
+      font-family: "roboto-bold", Arial, sans-serif;
+      display: block;
+      width: 100%;
+      padding: 5px 10px;
+      color: #FFFFFF;
+      background-color: #609eab; }
+    .content > div div {
+      padding: 5px 10px; }
+      .content > div div p {
+        font-size: 14px;
+        padding-bottom: 5px; }
 
 /* ***************************************************** VARIABLES */
 @font-face {
