@@ -14,7 +14,7 @@ if(isset($_REQUEST['id'])){
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title></title>
     <link rel="stylesheet" href="../css/style.css">
-    <script src="../js/static.js"></script>
+    <script src="../js/jquery-3.3.1.min.js"></script>
 </head>
 
 <body>

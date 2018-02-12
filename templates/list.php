@@ -22,4 +22,11 @@
 </div>
 </div>
 </div>
+<script>
+ $('.datos > p').each(function() {
+ 	if(this.innerHTML == ""){
+ 		this.remove();
+ 	}
+});
+</script>
 
