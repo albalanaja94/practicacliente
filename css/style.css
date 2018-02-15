@@ -427,7 +427,7 @@ body {
   src: url("../fonts/icomoon/icomoon.eot?#iefix") format("embedded-opentype"), url("../fonts/icomoon/icomoon.woff") format("woff"); }
 
 header {
-  background-color: #609eab;
+  background-color: #7aa3ac;
   padding: 10px;
   position: fixed;
   width: 100%; }
@@ -646,7 +646,7 @@ footer {
           footer .all > *.social-networks a.lk:before {
             content: "\eaca"; }
           footer .all > *.social-networks a:hover:before {
-            color: #609eab; }
+            color: #7aa3ac; }
 
 /* ***************************************************** VARIABLES */
 @font-face {
@@ -794,9 +794,9 @@ div.enlace {
   padding: 20px 0; }
 
 .link {
-  background-color: #609eab;
+  background-color: #7aa3ac;
   color: #FFFFFF;
-  border: 2px solid #609eab;
+  border: 2px solid #7aa3ac;
   border-radius: 5px;
   font-family: "roboto-bold", Arial, sans-serif;
   text-decoration: none;
@@ -807,7 +807,7 @@ div.enlace {
   transition: all 0.5s ease-in-out; }
   .link:hover {
     background-color: #FFFFFF;
-    color: #609eab; }
+    color: #7aa3ac; }
 
 form {
   max-width: 700px;
@@ -819,6 +819,8 @@ form {
     font-size: 16px;
     font-family: "roboto-regular", Arial, sans-serif;
     padding: 10px 0; }
+    form > div.all {
+      width: 100%; }
     form > div label {
       padding-right: 10px;
       font-family: "roboto-bold", Arial, sans-serif; }
@@ -830,9 +832,9 @@ form {
     text-align: center;
     margin-bottom: 40px;
     margin-top: 40px;
-    background-color: #609eab;
+    background-color: #7aa3ac;
     color: #FFFFFF;
-    border: 2px solid #609eab;
+    border: 2px solid #7aa3ac;
     border-radius: 5px;
     font-family: "roboto-bold", Arial, sans-serif;
     text-decoration: none;
@@ -843,28 +845,54 @@ form {
     transition: all 0.5s ease-in-out; }
     form input[type="button"]:hover {
       background-color: #FFFFFF;
-      color: #609eab; }
+      color: #7aa3ac; }
 
-.content {
-  font-size: 0; }
-  .content > div {
-    display: inline-block;
-    vertical-align: top;
-    width: 25%;
-    font-family: "roboto-regular", Arial, sans-serif; }
-    .content > div label {
-      font-size: 16px;
-      font-family: "roboto-bold", Arial, sans-serif;
-      display: block;
-      width: 100%;
-      padding: 5px 10px;
-      color: #FFFFFF;
-      background-color: #609eab; }
-    .content > div div {
-      padding: 5px 10px; }
-      .content > div div p {
-        font-size: 14px;
-        padding-bottom: 5px; }
+table {
+  width: 100%;
+  text-align: center; }
+  table thead th {
+    font-size: 16px;
+    font-family: "roboto-bold", Arial, sans-serif;
+    padding: 5px 10px;
+    color: #FFFFFF;
+    background-color: #7aa3ac; }
+  table tbody tr td {
+    font-family: "roboto-regular", Arial, sans-serif;
+    padding: 10px 5px; }
+    table tbody tr td.monumentos.ico, table tbody tr td.arte.ico {
+      font-size: 0; }
+      table tbody tr td.monumentos.ico:before, table tbody tr td.arte.ico:before {
+        color: #7aa3ac;
+        font-family: 'icomoon';
+        font-size: 22px;
+        speak: none;
+        font-style: normal;
+        font-weight: normal;
+        font-variant: normal;
+        text-transform: none;
+        line-height: 1;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale; }
+    table tbody tr td.monumentos.no-ico, table tbody tr td.arte.no-ico {
+      font-size: 0; }
+      table tbody tr td.monumentos.no-ico:before, table tbody tr td.arte.no-ico:before {
+        color: #7aa3ac;
+        font-family: 'icomoon';
+        font-size: 22px;
+        speak: none;
+        font-style: normal;
+        font-weight: normal;
+        font-variant: normal;
+        text-transform: none;
+        line-height: 1;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+        content: "\e902";
+        color: red; }
+    table tbody tr td.monumentos.ico:before {
+      content: "\e900"; }
+    table tbody tr td.arte.ico:before {
+      content: "\e901"; }
 
 /* ***************************************************** VARIABLES */
 @font-face {

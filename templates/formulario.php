@@ -2,7 +2,7 @@
 <img class="cabecera" src="../images/social-media.jpg" alt="">
 <div class="body">
 <h1>Introduce tus datos</h1>
-<form id="formulario" method="post" action="?id=lista">
+<form id="formulario" method="post" action="lista.php">
 	<div class="nombre">
 		<label>Nombre:</label>
 		<input id="nombre" type="text" name="nombre" placeholder="Introduce tu nombre">
@@ -18,6 +18,11 @@
 	<div class="edad">
 		<label>Edad:</label>
 		<input id="edad" type="text" name="edad" placeholder="Introduce tu edad">
+	</div>
+	<div class="rss">
+		<label>RSS (Selecciona varias o una):</label><br>
+		  <input type="radio" name="monumentos" value="monumentos">Monumentos Zaragoza
+		  <input type="radio" name="arte" value="arte">Arte Público
 	</div>
 	<input type="button" value="Enviar" id="enviar" onclick="validar()">
 </form>

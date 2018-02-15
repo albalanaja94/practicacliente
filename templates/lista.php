@@ -1,51 +1,33 @@
 <?php 
-$nombre="";
-if (!empty($_REQUEST['nombre'])){
-$nombre=$_REQUEST['nombre'];
+
+include('db.php');
+
+
+$nombre = $_POST['nombre'];
+$email = $_POST['email'];
+$dni = $_POST['dni'];
+$edad = $_POST['edad'];
+if(isset($_POST['monumentos'])){
+     $monumentos = 1;
+}else{
+     $monumentos = 0;
 }
- 
-$email="";
-if (!empty($_REQUEST['email'])){
-$email=$_REQUEST['email'];
+if(isset($_POST['arte'])){
+     $arte_publico = 1;
+}else{
+     $arte_publico = 0;
 }
- 
-$dni="";
-if (!empty($_REQUEST['dni'])){
-$dni=$_REQUEST['dni'];
-}
- 
-$edad="";
-if (!empty($_REQUEST['edad'])){
-$edad=$_REQUEST['edad'];
-}
- 
- 
-$archivo="../nombre.txt";
+$error = '';
+$db = new db();
 
-     $file=fopen($archivo,"a"); 
-     fwrite($file,"<p>".$nombre."</p>"); 
-     fclose($file);
+$sql = "INSERT INTO persona (nombre, email, edad, dni, monumentos, arte_publico) VALUES (?,?,?,?,?,?)";
+$resultado = $db->lanzar_consulta($sql, array($nombre, $email, $edad, $dni, $monumentos, $arte_publico));
 
-$archivo="../email.txt";
 
-     $file=fopen($archivo,"a"); 
-     fwrite($file,"<p>".$email."</p>"); 
-     fclose($file); 
 
-$archivo="../dni.txt";
+$db->desconectar();
 
-     $file=fopen($archivo,"a"); 
-     fwrite($file,"<p>".$dni."</p>"); 
-     fclose($file); 
-
-$archivo="../edad.txt";
-
-     $file=fopen($archivo,"a"); 
-     fwrite($file,"<p>".$edad."</p>"); 
-     fclose($file); 
-
-header("Location: http://localhost/practica_cliente/templates/index.php?id=list", true, 301);
-exit();
+header("Location: http://localhost/practica_cliente/templates/index.php?id=list");
 
 ?>
 
