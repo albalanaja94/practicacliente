@@ -10,7 +10,7 @@
 			<th>DNI</th>
 			<th>Edad</th>
 			<th>Monumentos</th>
-			<th>Arte público</th>
+			<th>Alojamientos</th>
 		</tr>
 	</thead>
 <?php 
@@ -39,8 +39,8 @@ while($fila= $resultado->fetch_assoc()){
 <td class="monumentos">
 <?= $fila["monumentos"] ?>
 </td>
-<td class="arte">
-<?= $fila["arte_publico"] ?>
+<td class="alojamientos">
+<?= $fila["alojamientos"] ?>
 </td>
 </tr>
 <?php 
@@ -57,7 +57,7 @@ while($fila= $resultado->fetch_assoc()){
   	$(this).addClass('no-ico');
   }
 });
- $("table tbody tr td.arte").each(function() {
+ $("table tbody tr td.alojamientos").each(function() {
   if(this.innerHTML == 1){
   	$(this).addClass('ico');
   }else{
@@ -68,9 +68,4 @@ while($fila= $resultado->fetch_assoc()){
 
 <?php 
 $db->desconectar();
-
-// $url = "http://www.zaragoza.es/ciudad/artepublico/buscar_ArtePublico";
-// $xml = file_get_contents($url);
-// $prueba = json_decode($xml);
-// var_dump ( $prueba);
 ?>

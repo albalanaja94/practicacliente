@@ -12,16 +12,16 @@ if(isset($_POST['monumentos'])){
 }else{
      $monumentos = 0;
 }
-if(isset($_POST['arte'])){
-     $arte_publico = 1;
+if(isset($_POST['alojamientos'])){
+     $alojamientos = 1;
 }else{
-     $arte_publico = 0;
+     $alojamientos = 0;
 }
 $error = '';
 $db = new db();
 
-$sql = "INSERT INTO persona (nombre, email, edad, dni, monumentos, arte_publico) VALUES (?,?,?,?,?,?)";
-$resultado = $db->lanzar_consulta($sql, array($nombre, $email, $edad, $dni, $monumentos, $arte_publico));
+$sql = "INSERT INTO persona (nombre, email, edad, dni, monumentos, alojamientos) VALUES (?,?,?,?,?,?)";
+$resultado = $db->lanzar_consulta($sql, array($nombre, $email, $edad, $dni, $monumentos, $alojamientos));
 
 
 

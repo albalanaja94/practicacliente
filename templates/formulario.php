@@ -20,9 +20,9 @@
 		<input id="edad" type="text" name="edad" placeholder="Introduce tu edad">
 	</div>
 	<div class="rss">
-		<label>RSS (Selecciona varias o una):</label><br>
+		<label>RSS (Selecciona una o varias):</label><br>
 		  <input type="radio" name="monumentos" value="monumentos">Monumentos Zaragoza
-		  <input type="radio" name="arte" value="arte">Arte Público
+		  <input type="radio" name="alojamientos" value="arte">Alojamientos
 	</div>
 	<input type="button" value="Enviar" id="enviar" onclick="validar()">
 </form>

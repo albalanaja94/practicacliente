@@ -1,10 +1,10 @@
 @font-face {
   font-family: 'icomoon';
-  src:  url('fonts/icomoon.eot?kfhhid');
-  src:  url('fonts/icomoon.eot?kfhhid#iefix') format('embedded-opentype'),
-    url('fonts/icomoon.ttf?kfhhid') format('truetype'),
-    url('fonts/icomoon.woff?kfhhid') format('woff'),
-    url('fonts/icomoon.svg?kfhhid#icomoon') format('svg');
+  src:  url('fonts/icomoon.eot?ktwwle');
+  src:  url('fonts/icomoon.eot?ktwwle#iefix') format('embedded-opentype'),
+    url('fonts/icomoon.ttf?ktwwle') format('truetype'),
+    url('fonts/icomoon.woff?ktwwle') format('woff'),
+    url('fonts/icomoon.svg?ktwwle#icomoon') format('svg');
   font-weight: normal;
   font-style: normal;
 }
@@ -24,6 +24,12 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+.icon-hotel:before {
+  content: "\e901";
+}
+.icon-church:before {
+  content: "\e900";
+}
 .icon-cancel:before {
   content: "\e902";
 }
@@ -44,10 +50,4 @@
 }
 .icon-linkedin2:before {
   content: "\eaca";
-}
-.icon-church:before {
-  content: "\e900";
-}
-.icon-icon:before {
-  content: "\e901";
 }
