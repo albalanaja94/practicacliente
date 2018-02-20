@@ -859,9 +859,9 @@ table {
   table tbody tr td {
     font-family: "roboto-regular", Arial, sans-serif;
     padding: 10px 5px; }
-    table tbody tr td.monumentos.ico, table tbody tr td.alojamientos.ico {
+    table tbody tr td.noticias.ico, table tbody tr td.tiempo.ico {
       font-size: 0; }
-      table tbody tr td.monumentos.ico:before, table tbody tr td.alojamientos.ico:before {
+      table tbody tr td.noticias.ico:before, table tbody tr td.tiempo.ico:before {
         color: #7aa3ac;
         font-family: 'icomoon';
         font-size: 22px;
@@ -873,9 +873,9 @@ table {
         line-height: 1;
         -webkit-font-smoothing: antialiased;
         -moz-osx-font-smoothing: grayscale; }
-    table tbody tr td.monumentos.no-ico, table tbody tr td.alojamientos.no-ico {
+    table tbody tr td.noticias.no-ico, table tbody tr td.tiempo.no-ico {
       font-size: 0; }
-      table tbody tr td.monumentos.no-ico:before, table tbody tr td.alojamientos.no-ico:before {
+      table tbody tr td.noticias.no-ico:before, table tbody tr td.tiempo.no-ico:before {
         color: #7aa3ac;
         font-family: 'icomoon';
         font-size: 22px;
@@ -889,9 +889,9 @@ table {
         -moz-osx-font-smoothing: grayscale;
         content: "\e902";
         color: red; }
-    table tbody tr td.monumentos.ico:before {
+    table tbody tr td.noticias.ico:before {
       content: "\e900"; }
-    table tbody tr td.alojamientos.ico:before {
+    table tbody tr td.tiempo.ico:before {
       content: "\e901"; }
 
 /* ***************************************************** VARIABLES */
