@@ -1,41 +1,33 @@
 <?php
 header("Location: http://localhost/practica_cliente/templates/index.php");
-
-
-//MONUMENTOS
-//URL JSON
-$req = 'http://www.zaragoza.es/georref/json/hilo/ver_Monumento';
-
-//cURL junto con la URL
-$cMonumento = curl_init($req);
-
-//Opciones para leer
-curl_setopt($cMonumento,CURLOPT_RETURNTRANSFER, TRUE);
-
-//Se captura la url
-$gMonumento = curl_exec($cMonumento);
-
-//Descodificar
-$getMonumento = json_decode($gMonumento,true);
-
-//ALOJAMIENTOS
-$reqA = 'http://www.zaragoza.es/georref/json/hilo/ver_Alojamiento';
-
-$cAlojamiento = curl_init($reqA);
-
-curl_setopt($cAlojamiento,CURLOPT_RETURNTRANSFER, TRUE);
-
-$gAlojamiento = curl_exec($cAlojamiento);
-
-$getAlojamiento = json_decode($gAlojamiento,true);
-
-
 include('db.php');
 
 $db = new db();
 
-$sql = "INSERT INTO datos (monumentos, alojamientos) VALUES (?,?)";
-$resultado = $db->lanzar_consulta($sql, array($gMonumento, $gAlojamiento));
+$url = "http://datos.santander.es/api/rest/datasets/noticias_economia.xml";
+$datos = simplexml_load_file($url);
+$resource = $datos->resources->resource;
+foreach($resource as $data){
+	// echo $data->str[0] . "<br>";
+	// echo $data->str[1] . "<br>";
+	$sql = "INSERT INTO noticias (title, description) VALUES (?,?)";
+	$resultado = $db->lanzar_consulta($sql, array((string)$data->str[0], (string)$data->str[1]));
+}
+
+$url2 = "http://xml.tutiempo.net/xml/8410.xml";
+$datos2 = simplexml_load_file($url2);
+$resource2 = $datos2->pronostico_horas->hora;
+foreach($resource2 as $tiempo){
+	// echo $tiempo->fecha . "<br>";
+	// echo $tiempo->hora_datos . "<br>";
+	// echo $tiempo->temperatura . "<br>";
+	// echo $tiempo->texto . "<br>";
+	// echo $tiempo->viento . "<br>";
+
+	$sql = "INSERT INTO tiempo (fecha, hora_datos, temperatura, texto, viento) VALUES (?,?,?,?,?)";
+	$resultado = $db->lanzar_consulta($sql, array((string)$tiempo->fecha, (string)$tiempo->hora_datos, (string)$tiempo->temperatura, (string)$tiempo->texto, (string)$tiempo->viento));
+}
+
 
 
 $db->desconectar();

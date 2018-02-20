@@ -9,8 +9,8 @@
 			<th>Email</th>
 			<th>DNI</th>
 			<th>Edad</th>
-			<th>Monumentos</th>
-			<th>Alojamientos</th>
+			<th>Noticias</th>
+			<th>Tiempo</th>
 		</tr>
 	</thead>
 <?php 
@@ -36,11 +36,11 @@ while($fila= $resultado->fetch_assoc()){
 <td class="edad">
 <?= $fila["edad"] ?>
 </td>
-<td class="monumentos">
-<?= $fila["monumentos"] ?>
+<td class="noticias">
+<?= $fila["noticias"] ?>
 </td>
-<td class="alojamientos">
-<?= $fila["alojamientos"] ?>
+<td class="tiempo">
+<?= $fila["tiempo"] ?>
 </td>
 </tr>
 <?php 
@@ -50,14 +50,14 @@ while($fila= $resultado->fetch_assoc()){
 </div>
 </div>
 <script>
- $("table tbody tr td.monumentos").each(function() {
+ $("table tbody tr td.noticias").each(function() {
   if(this.innerHTML == 1){
   	$(this).addClass('ico');
   }else{
   	$(this).addClass('no-ico');
   }
 });
- $("table tbody tr td.alojamientos").each(function() {
+ $("table tbody tr td.tiempo").each(function() {
   if(this.innerHTML == 1){
   	$(this).addClass('ico');
   }else{

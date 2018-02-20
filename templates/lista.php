@@ -7,21 +7,21 @@ $nombre = $_POST['nombre'];
 $email = $_POST['email'];
 $dni = $_POST['dni'];
 $edad = $_POST['edad'];
-if(isset($_POST['monumentos'])){
-     $monumentos = 1;
+if(isset($_POST['noticias'])){
+     $noticias = 1;
 }else{
-     $monumentos = 0;
+     $noticias = 0;
 }
-if(isset($_POST['alojamientos'])){
-     $alojamientos = 1;
+if(isset($_POST['tiempo'])){
+     $tiempo = 1;
 }else{
-     $alojamientos = 0;
+     $tiempo = 0;
 }
 $error = '';
 $db = new db();
 
-$sql = "INSERT INTO persona (nombre, email, edad, dni, monumentos, alojamientos) VALUES (?,?,?,?,?,?)";
-$resultado = $db->lanzar_consulta($sql, array($nombre, $email, $edad, $dni, $monumentos, $alojamientos));
+$sql = "INSERT INTO persona (nombre, email, edad, dni, noticias, tiempo) VALUES (?,?,?,?,?,?)";
+$resultado = $db->lanzar_consulta($sql, array($nombre, $email, $edad, $dni, $noticias, $tiempo));
 
 
 

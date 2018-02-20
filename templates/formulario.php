@@ -21,8 +21,8 @@
 	</div>
 	<div class="rss">
 		<label>RSS (Selecciona una o varias):</label><br>
-		  <input type="radio" name="monumentos" value="monumentos">Monumentos Zaragoza
-		  <input type="radio" name="alojamientos" value="arte">Alojamientos
+		  <input type="radio" name="noticias" value="noticias">Noticias
+		  <input type="radio" name="tiempo" value="tiempo">El tiempo
 	</div>
 	<input type="button" value="Enviar" id="enviar" onclick="validar()">
 </form>
